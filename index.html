@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<head>
+<title>Test Site</title>
+    <style>
+        #periodictablemain{
+            border: solid 1px black;
+        }
+
+        .numberrow th{
+            border-left: solid 2px blue;
+            border-bottom: solid 2px blue;
+        }
+
+        .element{
+            text-align: center; 
+            border-left: solid 1px black;
+            border-bottom: solid 1px black;
+            padding: 20px;
+            background-color: #f0d5a1;
+        }
+
+
+        .element:hover{
+            background-color: #7abfff;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+
+        .rownum{
+            color: blue;
+        }
+
+        .extraarea{
+           border: solid 1px red;
+        }
+        .longelementarea{
+            border: solid 1px red;
+        }
+        .longelementarea th{
+            border-right: solid 1px black;
+            border-left: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+        .longelementarea td{
+            border-left: solid 1px black;
+            border-bottom: solid 1px black;
+        }
+        .pdsecond{
+            background-color: #ff7a7a;
+        }
+
+        /* .element .at_num{
+            position: absolute;
+            top: 142px;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+        
+
+        .element .at_num2{
+            text-align: left;
+        }
+        /* .element .at_num2{
+            position: absolute;
+            top: 202px;
+            margin-left: 23px;
+            font-size: 15px;
+        } */ */
+
+        .modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 400px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+	}
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+    </style>
+</head>
+
+<body>
+    <h1>HomePage</h1>
+
+
+    <p>This is the HomePage</p>
+
+    <table id="periodictablemain">
+        <tr class=numberrow>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
+            <th>16</th>
+            <th>17</th>
+            <th>18</th>
+        </tr>
+        <tr class=row1>
+            <td class="rownum">1</td>
+            <td class="element" onclick="location.href='#openH'">
+                <div class="at_num">1</div>H</td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class="element" onclick="location.href='#openHe'"><div class="at_num">2</div>He</td>
+        </tr>
+        <tr class=row2>
+            <td class="rownum">2</td>
+            <td class="element" onclick="location.href='#openLi'"><div class="at_num2">3<br /></div>Li</td>
+            <td class="element" onclick="location.href='#openBe'"><div class="at_num2">4</div>Be</td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class="element" onclick="location.href='#openB'"><div class="at_num2">5</div>B</td>
+            <td class="element"onclick="location.href='#openC'"><div class="at_num2">6</div>C</td>
+            <td class="element"><div class="at_num2">7</div>N</td>
+            <td class="element"><div class="at_num2">8</div>O</td>
+            <td class="element"><div class="at_num2">9</div>F</td>
+            <td class="element"><div class="at_num2">10</div>Ne</td>
+        </tr>
+        <tr class=row3>
+            <td class="rownum">3</td>
+            <td class="element"><div class="at_num3">11</div>Na</td>
+            <td class="element">Mg</td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class=emptydata></td>
+            <td class="element">Al</td>
+            <td class="element">Si</td>
+            <td class="element">P</td>
+            <td class="element">S</td>
+            <td class="element">Cl</td>
+            <td class="element">Ar</td>
+        </tr>
+        <tr class=row4>
+            <td class="rownum">4</td>
+            <td class="element">K</td>
+            <td class="element">Ca</td>
+            <td class="element">Sc</td>
+            <td class="element">Ti</td>
+            <td class="element">V</td>
+            <td class="element">Cr</td>
+            <td class="element">Mn</td>
+            <td class="element">Fe</td>
+            <td class="element">Co</td>
+            <td class="element">Ni</td>
+            <td class="element">Cu</td>
+            <td class="element">Zn</td>
+            <td class="element">Ga</td>
+            <td class="element">Ge</td>
+            <td class="element">As</td>
+            <td class="element">Se</td>
+            <td class="element">Br</td>
+            <td class="element">Kr</td>
+        </tr>
+        <tr class=row5>
+            <td class="rownum">5</td>
+            <td class="element">Rb</td>
+            <td class="element">Sr</td>
+            <td class="element">Y</td>
+            <td class="element">Zr</td>
+            <td class="element">Nb</td>
+            <td class="element">Mo</td>
+            <td class="element">Tc</td>
+            <td class="element">Ru</td>
+            <td class="element">Rh</td>
+            <td class="element">Pd</td>
+            <td class="element">Ag</td>
+            <td class="element">Cd</td>
+            <td class="element">In</td>
+            <td class="element">Sn</td>
+            <td class="element">Sb</td>
+            <td class="element">Te</td>
+            <td class="element">I</td>
+            <td class="element">Xe</td>
+        </tr>
+        <tr class=row6>
+            <td class="rownum">6</td>
+            <td class="element">Cs</td>
+            <td class="element">Ba</td>
+            <td class="extraarea">51-71</td>
+            <td class="element">Hf</td>
+            <td class="element">Ta</td>
+            <td class="element">W</td>
+            <td class="element">Re</td>
+            <td class="element">Os</td>
+            <td class="element">Ir</td>
+            <td class="element">Pt</td>
+            <td class="element">Au</td>
+            <td class="element">Hg</td>
+            <td class="element">Tl</td>
+            <td class="element">Pb</td>
+            <td class="element">Bi</td>
+            <td class="element">Po</td>
+            <td class="element">At</td>
+            <td class="element">Rn</td>
+        </tr>
+        <tr class=row7>
+            <td class="rownum">7</td>
+            <td class="element">Fr</td>
+            <td class="element">Ra</td>
+            <td class="extraarea">81-103</td>
+            <td class="element">Rf</td>
+            <td class="element">Db</td>
+            <td class="element">Sg</td>
+            <td class="element">Bh</td>
+            <td class="element">Hs</td>
+            <td class="element">Mt</td>
+            <td class="element">Ds</td>
+            <td class="element">Rg</td>
+            <td class="element">Cn</td>
+            <td class="element">Nh</td>
+            <td class="element">Fl</td>
+            <td class="element">Mc</td>
+            <td class="element">Lv</td>
+            <td class="element">Ts</td>
+            <td class="element">Og</td>
+        </tr>
+    </table>
+    <table class="longelementarea">
+        <tr class="57-71">
+            <th>57-71</th>
+            <td class="element pdsecond">La</td>
+            <td class="element pdsecond">Ce</td>
+            <td class="element pdsecond">Pr</td>
+            <td class="element pdsecond">Nd</td>
+            <td class="element pdsecond">Pm</td>
+            <td class="element pdsecond">Sm</td>
+            <td class="element pdsecond">Eu</td>
+            <td class="element pdsecond">Gd</td>
+            <td class="element pdsecond">Tb</td>
+            <td class="element pdsecond">Dy</td>
+            <td class="element pdsecond">Ho</td>
+            <td class="element pdsecond">Er</td>
+            <td class="element pdsecond">Tm</td>
+            <td class="element pdsecond">Yb</td>
+            <td class="element pdsecond">Lu</td>
+        </tr>
+        <tr class="89-103">
+            <th>89-103</th>
+            <td class="element pdsecond">Ac</td>
+            <td class="element pdsecond">Th</td>
+            <td class="element pdsecond">Pa</td>
+            <td class="element pdsecond">U</td>
+            <td class="element pdsecond">Np</td>
+            <td class="element pdsecond">Pu</td>
+            <td class="element pdsecond">Am</td>
+            <td class="element pdsecond">Cm</td>
+            <td class="element pdsecond">Bk</td>
+            <td class="element pdsecond">Cf</td>
+            <td class="element pdsecond">Es</td>
+            <td class="element pdsecond">Fm</td>
+            <td class="element pdsecond">Md</td>
+            <td class="element pdsecond">No</td>
+            <td class="element pdsecond">Lr</td>
+    </table>
+
+
+    <div id="openH" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>H - Hydrogen</h2>
+		<p><Img src="./imgs/hydrogenimg.png"></p>
+	</div>
+</div>
+
+    <div id="openHe" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Modal Box</h2>
+		<p>He</p>
+	</div>
+</div>
+
+    <div id="openLi" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Modal Box</h2>
+		<p>Li</p>
+	</div>
+</div>
+
+    <div id="openBe" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Modal Box</h2>
+		<p>Be</p>
+	</div>
+</div>
+
+    <div id="openB" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Modal Box</h2>
+		<p>B</p>
+	</div>
+</div>
+
+    <div id="openC" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Modal Box</h2>
+		<p>He</p>
+	</div>
+</div>
+
+</body>
+
+</html>
