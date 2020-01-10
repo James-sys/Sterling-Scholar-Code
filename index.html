@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 
 <head>
-    
 
-<title>Test Site</title>
+
+    <title>Test Site</title>
     <style>
-        #periodictablemain{
+        #periodictablemain {
             border: solid 1px black;
         }
 
-        .numberrow th{
+        .numberrow th {
             border-left: solid 2px blue;
             border-bottom: solid 2px blue;
         }
 
-        .element{
-            text-align: center; 
+        .element {
             border-left: solid 1px black;
             border-bottom: solid 1px black;
             padding: 20px;
@@ -23,33 +22,37 @@
         }
 
 
-        .element:hover{
+        .element:hover {
             background-color: #7abfff;
             transition: 0.5s;
             cursor: pointer;
         }
-        
 
-        .rownum{
+
+        .rownum {
             color: blue;
         }
 
-        .extraarea{
-           border: solid 1px red;
-        }
-        .longelementarea{
+        .extraarea {
             border: solid 1px red;
         }
-        .longelementarea th{
+
+        .longelementarea {
+            border: solid 1px red;
+        }
+
+        .longelementarea th {
             border-right: solid 1px black;
             border-left: solid 1px black;
             border-bottom: solid 1px black;
         }
-        .longelementarea td{
+
+        .longelementarea td {
             border-left: solid 1px black;
             border-bottom: solid 1px black;
         }
-        .pdsecond{
+
+        .pdsecond {
             background-color: #ff7a7a;
         }
 
@@ -69,58 +72,60 @@
             top: 202px;
             margin-left: 23px;
             font-size: 15px;
-        } */ */
+        } */
 
-        .modalDialog {
-		position: fixed;
-		font-family: Arial, Helvetica, sans-serif;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: rgba(0,0,0,0.8);
-		z-index: 99999;
-		opacity:0;
-		-webkit-transition: opacity 400ms ease-in;
-		-moz-transition: opacity 400ms ease-in;
-		transition: opacity 400ms ease-in;
-		pointer-events: none;
-	}
+        */ .modalDialog {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 99999;
+            opacity: 0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+            pointer-events: none;
+        }
 
-	.modalDialog:target {
-		opacity:1;
-		pointer-events: auto;
-	}
+        .modalDialog:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
-	.modalDialog > div {
-		width: 400px;
-		position: relative;
-		margin: 10% auto;
-		padding: 5px 20px 13px 20px;
-		border-radius: 10px;
-		background: #fff;
-	}
+        .modalDialog>div {
+            width: 400px;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+        }
 
-	.close {
-		background: #606061;
-		color: #FFFFFF;
-		line-height: 25px;
-		position: absolute;
-		right: -12px;
-		text-align: center;
-		top: -10px;
-		width: 24px;
-		text-decoration: none;
-		font-weight: bold;
-		-webkit-border-radius: 12px;
-		-moz-border-radius: 12px;
-		border-radius: 12px;
-		-moz-box-shadow: 1px 1px 3px #000;
-		-webkit-box-shadow: 1px 1px 3px #000;
-		box-shadow: 1px 1px 3px #000;
-	}
+        .close {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            position: absolute;
+            right: -12px;
+            text-align: center;
+            top: -10px;
+            width: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
 
-	.close:hover { background: #00d9ff; }
+        .close:hover {
+            background: #00d9ff;
+        }
     </style>
 </head>
 
@@ -155,7 +160,10 @@
         <tr class=row1>
             <td class="rownum">1</td>
             <td class="element" onclick="location.href='#openH'">
-                <div class="at_num">1</div>H</td>
+                <div class="at_num">1</div>H
+                <div class="at_data">Hydrogen
+                    <br />1.008</div>
+            </td>
             <td class=emptydata></td>
             <td class=emptydata></td>
             <td class=emptydata></td>
@@ -172,12 +180,20 @@
             <td class=emptydata></td>
             <td class=emptydata></td>
             <td class=emptydata></td>
-            <td class="element" onclick="location.href='#openHe'"><div class="at_num">2</div>He</td>
+            <td class="element" onclick="location.href='#openHe'">
+                <div class="at_num">2</div>He
+                <div class="at_data">Helium
+                    <br />4.0026</div>
+            </td>
         </tr>
         <tr class=row2>
             <td class="rownum">2</td>
-            <td class="element" onclick="location.href='#openLi'"><div class="at_num2">3<br /></div>Li</td>
-            <td class="element" onclick="location.href='#openBe'"><div class="at_num2">4</div>Be</td>
+            <td class="element" onclick="location.href='#openLi'">
+                <div class="at_num2">3
+                    <br />
+                </div>Li</td>
+            <td class="element" onclick="location.href='#openBe'">
+                <div class="at_num2">4</div>Be</td>
             <td class=emptydata></td>
             <td class=emptydata></td>
             <td class=emptydata></td>
@@ -188,16 +204,23 @@
             <td class=emptydata></td>
             <td class=emptydata></td>
             <td class=emptydata></td>
-            <td class="element" onclick="location.href='#openB'"><div class="at_num2">5</div>B</td>
-            <td class="element"onclick="location.href='#openC'"><div class="at_num2">6</div>C</td>
-            <td class="element"><div class="at_num2">7</div>N</td>
-            <td class="element"><div class="at_num2">8</div>O</td>
-            <td class="element"><div class="at_num2">9</div>F</td>
-            <td class="element"><div class="at_num2">10</div>Ne</td>
+            <td class="element" onclick="location.href='#openB'">
+                <div class="at_num2">5</div>B</td>
+            <td class="element" onclick="location.href='#openC'">
+                <div class="at_num2">6</div>C</td>
+            <td class="element">
+                <div class="at_num2">7</div>N</td>
+            <td class="element">
+                <div class="at_num2">8</div>O</td>
+            <td class="element">
+                <div class="at_num2">9</div>F</td>
+            <td class="element">
+                <div class="at_num2">10</div>Ne</td>
         </tr>
         <tr class=row3>
             <td class="rownum">3</td>
-            <td class="element"><div class="at_num3">11</div>Na</td>
+            <td class="element">
+                <div class="at_num3">11</div>Na</td>
             <td class="element">Mg</td>
             <td class=emptydata></td>
             <td class=emptydata></td>
@@ -341,52 +364,54 @@
 
 
     <div id="openH" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>H - Hydrogen</h2>
-		<p><Img src="./imgs/hydrogenimg.png"></p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>H - Hydrogen</h2>
+            <p>
+                <Img src="./imgs/hydrogenimg.png">
+            </p>
+        </div>
+    </div>
 
     <div id="openHe" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Modal Box</h2>
-		<p>He</p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box</h2>
+            <p>He</p>
+        </div>
+    </div>
 
     <div id="openLi" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Modal Box</h2>
-		<p>Li</p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box</h2>
+            <p>Li</p>
+        </div>
+    </div>
 
     <div id="openBe" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Modal Box</h2>
-		<p>Be</p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box</h2>
+            <p>Be</p>
+        </div>
+    </div>
 
     <div id="openB" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Modal Box</h2>
-		<p>B</p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box</h2>
+            <p>B</p>
+        </div>
+    </div>
 
     <div id="openC" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Modal Box</h2>
-		<p>He</p>
-	</div>
-</div>
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box</h2>
+            <p>He</p>
+        </div>
+    </div>
 
 </body>
 
