@@ -1,0 +1,37 @@
+.periodictablemain {
+  position: relative;
+  height: 200px;
+}
+
+.periodicrow {
+  clear: both;
+  height: 30%;
+  /* display: flex; */
+}
+
+.cell {
+  border: 1px solid blue;
+  float: left;
+  position: relative;
+  width: 5.55%;
+  height: 100%;
+}
+
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  right: 1px;
+}
+
+.at_num,
+.at_details {
+  position: absolute;
+  font-size: 1em;
+}
+
+.at_num {
+  top: 2px;
+  right: 3px;
+}
